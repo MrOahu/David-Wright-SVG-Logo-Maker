@@ -11,16 +11,27 @@ function startApp(){
         },
         {
             type:"input",
-            name: "shapeColor",
-            message: "Please choose a color for you logo shape."
+            name:"shapeColor",
+            message: "Please choose a color for your logo shape."
         },
         // question for text you'd like
-        
+        {
+            type:"input",
+            name:"chosenText",
+            message:"Please choose a text for your logo."
+        }
+
 
         // question for text color you'd like
+        {
+            type: "input",
+            name: "textColor",
+            message: "Please select a color for your logo text."
+
+        }
 
     ])
 }
-
+//look docs on svg for circle and triangle
 
 startApp()
