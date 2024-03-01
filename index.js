@@ -1,5 +1,5 @@
 const inquirer = require("inquirer")
-
+const {Circle, Square, Triangle} = require("./library/shapes")
 
 function startApp(){
     inquirer.prompt([
@@ -29,7 +29,7 @@ function startApp(){
     ]).then(function(response) {
         console.log(response)
 
-        
+
     })
 }
 //look docs on svg for circle and triangle
