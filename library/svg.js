@@ -1,0 +1,5 @@
+class SVG {
+    render(){
+        return``
+    }
+}

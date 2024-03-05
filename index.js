@@ -28,9 +28,29 @@ function startApp(){
 
     ]).then(function(response) {
         console.log(response)
-
-
+        var selectedShape;
+        if (response.chosenShape === "circle"){
+            selectedShape = new Circle()
+        }
+        else if (response.chosenShape === "square"){
+                selectedShape = new Square()
+        }
+        else if (response.chosenShape === "triangle"){
+                 selectedShape = new Triangle()
+        }
     })
+    
+    const newShape = selectedShape.setColor(response.shapeColor)
+
+    let newLogo = `
+    <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+
+  ${newShape.render()}
+
+  <text x="150" y="125" font-size="60" text-anchor="middle" fill="#444">SVG</text>
+
+</svg>
+    `
 }
 //look docs on svg for circle and triangle
 
