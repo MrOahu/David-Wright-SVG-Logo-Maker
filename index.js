@@ -30,26 +30,25 @@ function startApp(){
         console.log(response)
         var selectedShape;
         if (response.chosenShape === "circle"){
-            selectedShape = new Circle()
+            selectedShape = new Circle(response.shapeColor)
         }
         else if (response.chosenShape === "square"){
-                selectedShape = new Square()
+                selectedShape = new Square(response.shapeColor)
         }
         else if (response.chosenShape === "triangle"){
-                 selectedShape = new Triangle()
+                 selectedShape = new Triangle(response.shapeColor)
         }
 
-        const newShape = selectedShape.setColor(response.shapeColor)
+        //const newShape = selectedShape.setColor(response.shapeColor)
 
         let newLogo = `
         <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
     
-        ${newShape.render()}
+        ${selectedShape.render()}
     
         <text x="150" y="125" font-size="60" text-anchor="middle" fill="${response.textColor}">${response.chosenText}</text>
     
-       </svg>
-       }) `
+       </svg>`
 
        fs.writeFileSync("logo.svg", newLogo)
 }).then(function (data){

@@ -1,6 +1,6 @@
 class Circle{
-constructor(){
-    this.color = ""
+constructor(color){
+    this.color = color
 }
 
 setColor(chosenColor){
@@ -15,8 +15,8 @@ render (){
 // new Circle().setColor("burgundy").render()  We create new circle instance, set color to burgundy, and then render tag with burgundy fill
 
 class Square{
-    constructor(){
-        this.color = ""
+    constructor(color){
+        this.color = color
     }
     
     setColor(chosenColor){
@@ -29,8 +29,8 @@ class Square{
 }
 
 class Triangle{
-    constructor(){
-        this.color = ""
+    constructor(color){
+        this.color = color
     }
     
     setColor(chosenColor){
