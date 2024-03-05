@@ -1,6 +1,6 @@
 const inquirer = require("inquirer")
 const {Circle, Square, Triangle} = require("./library/shapes")
-
+const fs = require("fs")
 function startApp(){
     inquirer.prompt([
         {
@@ -38,19 +38,24 @@ function startApp(){
         else if (response.chosenShape === "triangle"){
                  selectedShape = new Triangle()
         }
-    })
+
+        const newShape = selectedShape.setColor(response.shapeColor)
+
+        let newLogo = `
+        <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
     
-    const newShape = selectedShape.setColor(response.shapeColor)
+        ${newShape.render()}
+    
+        <text x="150" y="125" font-size="60" text-anchor="middle" fill="${response.textColor}">${response.chosenText}</text>
+    
+       </svg>
+       }) `
 
-    let newLogo = `
-    <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+       fs.writeFileSync("logo.svg", newLogo)
+}).then(function (data){
+    console.log("new svg logo created")
+})
 
-  ${newShape.render()}
-
-  <text x="150" y="125" font-size="60" text-anchor="middle" fill="#444">SVG</text>
-
-</svg>
-    `
 }
 //look docs on svg for circle and triangle
 
