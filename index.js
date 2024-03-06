@@ -17,7 +17,7 @@ function startApp(){
         {
             type:"input",
             name:"chosenText",
-            message:"Please choose a text for your logo."
+            message:"Please choose up to three characters for your logo."
         },
         {
             type:"input",
@@ -46,7 +46,7 @@ function startApp(){
     
         ${selectedShape.render()}
     
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill="${response.textColor}">${response.chosenText}</text>
+        <text x="150" y="130" font-size="45" text-anchor="middle" fill="${response.textColor}">${response.chosenText}</text>
     
        </svg>`
 

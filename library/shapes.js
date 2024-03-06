@@ -8,7 +8,7 @@ setColor(chosenColor){
 }
 
 render (){
-    return `<circle r="80" cx="50" cy="50" fill="${this.color}" />`
+    return `<circle r="80" cx="150" cy="100" fill="${this.color}" />`
 }
 }
 
@@ -24,7 +24,7 @@ class Square{
     }
     
     render (){
-        return `<rect width="120" height="120" x="10" y="10" fill="${this.color}" />`
+        return `<rect width="120" height="120" x="90" y="40" fill="${this.color}" />`
     }
 }
 
