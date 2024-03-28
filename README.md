@@ -8,7 +8,7 @@ Technologies used: node.js, npm, inquirer, jest
 
 ## URLs
 
-Video Link URL: chrome-extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/1fb4f07e-3e5c-44dd-y667-e261fa4a5b8b
+Video Link URL: https://drive.google.com/file/d/1RX2HiaGkzyLxTd7B-dvIJ3-18BpapIS9/view
 
 GitHub Repository Link URL: https://github.com/MrOahu/David-Wright-SVG-Logo-Maker
 
